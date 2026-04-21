@@ -1,0 +1,348 @@
+/* Layout Containers */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.header-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-subtitle {
+  font-size: 9px;
+  letter-spacing: 6px;
+  color: #00ff87;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.header-title {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  color: #f0f0f0;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.header-title span {
+  color: #00ff87;
+}
+
+.header-desc {
+  font-size: 11px;
+  color: #444;
+  margin-top: 8px;
+  letter-spacing: 2px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 860px;
+  flex-wrap: wrap;
+}
+
+/* Panel */
+.panel {
+  background: #0d0d0d;
+  border: 1px solid #1e1e1e;
+  border-radius: 0 0 12px 12px;
+  padding: 24px;
+  flex: 1;
+}
+
+.panel-title {
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-family: monospace;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+/* DropZone */
+.dropzone {
+  border-radius: 10px;
+  padding: 28px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.dropzone-dragging {
+  border: 1px solid #00ff87;
+  background: #0a1a10;
+}
+
+.dropzone-active {
+  border: 1px solid #333;
+  background: #0d0d0d;
+}
+
+.dropzone-inactive {
+  border: 1px dashed #2a2a2a;
+  background: #0d0d0d;
+}
+
+.dropzone-drag-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, #00ff8711 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.dropzone-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.dropzone-label {
+  font-size: 13px;
+  color: #666;
+  font-family: monospace;
+}
+
+/* File Info Box */
+.file-info-box {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #111;
+  border-radius: 6px;
+  font-size: 11px;
+  color: #777;
+  display: flex;
+  justify-content: space-between;
+  animation: slideUp .2s ease;
+}
+
+.file-info-name {
+  color: #ccc;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 11px 0;
+  border: none;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 14px;
+  transition: all 0.15s;
+}
+
+.btn-compress-active { background: #00ff87; color: #000; }
+.btn-compress-disabled { background: #1a1a1a; color: #333; }
+.btn-decompress-active { background: #60a5fa; color: #000; }
+.btn-decompress-disabled { background: #1a1a1a; color: #333; }
+
+.btn-loading-text {
+  animation: pulse 1s infinite;
+}
+
+/* Error Box */
+.error-box {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #1a0808;
+  border: 1px solid #ff4d4d33;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #ff4d4d;
+  animation: slideUp .2s ease;
+}
+
+/* Result Box */
+.result-box-compress {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: #06130a;
+  border: 1px solid #00ff8722;
+  border-radius: 10px;
+  animation: slideUp .25s ease;
+}
+
+.result-box-decompress {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: #06091a;
+  border: 1px solid #60a5fa22;
+  border-radius: 10px;
+  animation: slideUp .25s ease;
+}
+
+.download-btn-compress {
+  display: block;
+  margin-top: 14px;
+  padding: 9px 0;
+  background: #00ff8715;
+  border: 1px solid #00ff8744;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #00ff87;
+  font-family: monospace;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.download-btn-decompress {
+  display: block;
+  margin-top: 14px;
+  padding: 9px 0;
+  background: #60a5fa15;
+  border: 1px solid #60a5fa44;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #60a5fa;
+  font-family: monospace;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+/* StatRow */
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.stat-row-label {
+  font-size: 11px;
+  color: #555;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+.stat-row-value {
+  font-size: 13px;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+/* BarChart */
+.barchart-container {
+  margin-top: 12px;
+}
+
+.barchart-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.barchart-label {
+  font-size: 11px;
+  color: #888;
+  font-family: monospace;
+}
+
+.barchart-pct {
+  font-size: 11px;
+  font-family: monospace;
+  font-weight: 700;
+}
+
+.barchart-track {
+  height: 6px;
+  background: #1a1a1a;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.barchart-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+/* Activity Log */
+.activity-log-container {
+  width: 100%;
+  max-width: 860px;
+  margin-top: 16px;
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+
+.activity-log-title {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.activity-log-empty {
+  font-size: 11px;
+  color: #2a2a2a;
+  font-family: monospace;
+}
+
+.activity-log-item {
+  font-size: 11px;
+  font-family: monospace;
+  padding: 3px 0;
+  display: flex;
+  gap: 12px;
+}
+
+.activity-log-ts {
+  color: #333;
+  min-width: 70px;
+}
+
+/* Info Box */
+.info-box {
+  margin-top: 20px;
+  padding: 12px 14px;
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+}
+
+.info-box-title {
+  font-size: 10px;
+  color: #444;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.info-box-item {
+  display: flex;
+  gap: 10px;
+  padding: 4px 0;
+  font-size: 11px;
+  color: #555;
+}
+
+.info-box-num {
+  color: #00ff8766;
+  min-width: 20px;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: 28px;
+  font-size: 10px;
+  color: #2a2a2a;
+  letter-spacing: 2px;
+}
